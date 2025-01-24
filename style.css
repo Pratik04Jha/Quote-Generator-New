@@ -1,0 +1,309 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*::selection{
+    background-color: #fff;
+    color: black;
+}
+
+body, html{
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    overflow: hidden;
+    position: relative;
+}
+
+@font-face {
+    font-family: sunnyday;
+    src: url("Weather\ Sunday\ -\ Personal\ Use.otf");
+}
+
+.dot, .dot2{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid white;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000000;
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+
+.dot2{
+    height: 25px;
+    width: 25px;
+}
+
+.header{
+    position: fixed;
+    top: 50px;
+    animation: 0.6s forwards animee;
+    z-index: 100;
+}
+
+@keyframes animee {
+    0%{
+        top: 0;
+        opacity: 0;
+    }
+}
+
+.footer{
+    position: fixed;
+    top: 600px;
+    animation: anime 0.5s forwards;
+    z-index: 100;
+}
+
+@keyframes anime {
+    0%{
+        top: 650px;
+        opacity: 0;
+    }
+}
+
+.logo{
+    position: absolute;
+    left: 10px;
+    top: -40px;
+    height: 100px;
+}
+
+.header p{
+    position: fixed;
+    color: #EDC36C;
+    right: 70px;
+    cursor: pointer;
+}
+
+.footer p{
+    color: #EDC36C;
+    padding-left: 50px;
+}
+
+.footer a{
+    position: absolute;
+    right: -870%;
+    color: #EDC36C;
+    text-decoration: none;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+}
+
+.heading-container h1{
+    color: white;
+    font-size: 160px;
+    font-family: sunnyday;
+    position: absolute;
+    top: 80px;
+    left: 10%;
+    opacity: 0.9;
+    z-index: 2;
+    mix-blend-mode: difference;
+    opacity: 0;
+    animation: opacity 1s forwards;
+    animation-delay: 1.6s;
+}
+
+@keyframes opacity {
+    0%{
+        opacity: 0;
+        top: 30px;
+    }
+    100%{
+        opacity: 1;
+        top: 80px;
+    }
+}
+
+.bgImage{
+    height: 700px;
+    width: 700px;
+    object-fit: cover;
+    object-position: center;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -60%);
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    animation: opacity 1s forwards;
+    animation-delay: 0.6s;
+}
+
+@keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.swiper-slide p{
+    color: #ffffff;
+    opacity: 0.8;
+    font-size: 50px;
+    z-index: 10;
+    font-family: sunnyday;
+    font-weight: 100;
+    text-align: center;
+    cursor: grab;
+    pointer-events:fill;
+    line-height: 50px;
+}
+
+.swiper {
+    height: 280px;
+    width: 1000px;
+    position: relative;
+    top: 300px;
+    left: -1%;
+    opacity: 0;
+    animation: animeee 1s forwards;
+    animation-delay: 1.6s;
+}
+
+@keyframes animeee {
+    0%{
+        opacity: 0;
+        top: 400px;
+    }
+    100%{
+        opacity: 1;
+        top: 300px;
+    }
+}
+
+  .swiper-slide {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.pen{
+    height: 520px;
+    width: 520px;
+    position: absolute;
+    right: -190px;
+    bottom: 300px;
+    opacity: 0;
+    animation: opacityy 1s forwards;
+    animation-delay: 0.6s;
+    pointer-events: none;
+}
+
+@keyframes opacityy {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0.9;
+    }
+}
+
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.social{
+    height: 310px;
+    width: 50px;
+    position: absolute;
+    top: 200px;
+    left: 10px;
+}
+
+.instagram{
+    position: absolute;
+    top: 0px;
+    height: 50px;
+    opacity: 0;
+    animation: social 1s forwards;
+    animation-delay: 2.5s;
+}
+
+.youtube{
+    top: 60px;
+    animation-delay: 2.6s;
+}
+
+.x{
+    top: 120px;
+    animation-delay: 2.7s;
+}
+
+.in{
+    top: 180px;
+    animation-delay: 2.8s;
+
+}
+
+.pin{
+    top: 240px;
+    animation-delay: 2.9s;
+
+}
+
+@keyframes social {
+    0%{
+        left: 0;
+        opacity: 0;
+    }
+    100%{
+        left: 50px;
+        opacity: 1;
+    }
+}
+
+.nextt{
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 55%;
+    right: 70px;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0;
+    animation: left 1s forwards;
+    animation-delay: 2.5s;
+}
+
+@keyframes left {
+    0%{
+        right: 20px;
+        opacity: 0;
+    }
+    100%{
+        right: 70px;
+        opacity: 1;
+    }
+}
+
+
+.old-site{
+    color: #EDC36C;
+    position: absolute;
+    bottom: 85px;
+    left: 50%;
+    transform: translate(-50%);
+    animation: anime 0.5s forwards;
+    transition: 1s ease-in-out;
+}
